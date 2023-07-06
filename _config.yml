@@ -1,11 +1,11 @@
-title: John Doe # your name (or website title) here
+title: Soham Bhagwat # your name (or website title) here
 logo: "/images/logo.jpg?raw=true" # your photo (or logo) here
 description: > # your text below (remove <br> elements if you don't need line breaks)
-  First description 
-  <br><br>
-  Second description 
-  <br><br>
-  <a href="https://www.linkedin.com/in/example/">View My LinkedIn Profile</a> 
+  I am a Master's student pursuing Data Science @  <a href="https://www.iu.edu/">Indiana University</a>-Bloomington
+  <br>
+  I completed my undergrad at SPPU with BE in Computer Engg. with honors in AI and ML. 
+  <br>
+  <a href="https://www.linkedin.com/in/soham-bhagwat/">LinkedIn</a> 
   
 remote_theme: pages-themes/minimal@v0.2.0
 plugins:
