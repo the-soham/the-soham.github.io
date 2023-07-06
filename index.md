@@ -12,7 +12,7 @@
 <img src="images/dummy_thumbnail.jpg?raw=true"/>
 
 ---
-[Project 3 Title]([http://example.com/](https://github.com/the-soham/us-tornado-analysis/blob/main/index.html))
+[Project 3 Title]([(https://github.com/the-soham/us-tornado-analysis/blob/main/index.html)])
 <img src="images/dummy_thumbnail.jpg?raw=true"/>
 
 ---
