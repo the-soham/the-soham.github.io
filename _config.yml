@@ -6,7 +6,7 @@ description: > # your text below (remove <br> elements if you don't need line br
   <br>
   I completed my undergrad at SPPU with BE in Computer Engg. with honors in AI and ML. 
   <br><br>
-  <a href="https://www.linkedin.com/in/soham-bhagwat/">LinkedIn</a>&nbsp;&nbsp;&nbsp;&nbsp;<a href="https://github.com/the-soham">Github</a> &nbsp;&nbsp;&nbsp;&nbsp;<a href="/pdf/Soham_Bhagwat.pdf" target="_blank">CV</a> &nbsp;&nbsp;&nbsp;&nbsp;<a href = "mailto: sohambhagwat2@gmail.com">Email</a>
+  <a href="https://www.linkedin.com/in/soham-bhagwat/">LinkedIn</a>&nbsp;&nbsp;&nbsp;&nbsp;<a href="https://github.com/the-soham">Github</a> &nbsp;&nbsp;&nbsp;&nbsp; <a href="#" onclick='window.open("/pdf/Soham_Bhagwat.pdf");return false;'>CV</a>&nbsp;&nbsp;&nbsp;&nbsp;<a href = "mailto: sohambhagwat2@gmail.com">Email</a>
   
 remote_theme: pages-themes/minimal@v0.2.0
 plugins:
