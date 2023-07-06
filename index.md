@@ -12,7 +12,7 @@
 <img src="images/dummy_thumbnail.jpg?raw=true"/>
 
 ---
-[Project 3 Title]([https://github.com/the-soham/us-tornado-analysis/blob/main/index.html](https://the-soham.github.io/us-tornado-analysis/))
+[Project 3 Title](https://the-soham.github.io/us-tornado-analysis/)
 <img src="images/dummy_thumbnail.jpg?raw=true"/>
 
 ---
