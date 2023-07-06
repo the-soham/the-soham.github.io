@@ -6,9 +6,7 @@ description: > # your text below (remove <br> elements if you don't need line br
   <br>
   I completed my undergrad at SPPU with BE in Computer Engg. with honors in AI and ML. 
   <br><br>
-  <a href="https://www.linkedin.com/in/soham-bhagwat/">LinkedIn</a> 
-  <br>
-  <a href="https://github.com/the-soham">Github</a> 
+  <a href="https://www.linkedin.com/in/soham-bhagwat/">LinkedIn</a>&nbsp;&nbsp;<a href="https://github.com/the-soham">Github</a> 
   
 remote_theme: pages-themes/minimal@v0.2.0
 plugins:
