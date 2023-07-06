@@ -12,7 +12,7 @@
 <img src="images/dummy_thumbnail.jpg?raw=true"/>
 
 ---
-[Project 3 Title](/_projects/us_tornadoes/US_Tornadoes_EDA)
+[Project 3 Title](/projects/us_tornadoes/US_Tornadoes_EDA)
 <img src="images/dummy_thumbnail.jpg?raw=true"/>
 
 ---
