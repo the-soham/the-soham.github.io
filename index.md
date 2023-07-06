@@ -12,7 +12,7 @@
 <img src="images/dummy_thumbnail.jpg?raw=true"/>
 
 ---
-[Project 3 Title](/projects/us_tornadoes/US_Tornadoes_EDA)
+[Project 3 Title](https://the-soham.github.io/us-tornado-analysis/){:target="_blank"}
 <img src="images/dummy_thumbnail.jpg?raw=true"/>
 
 ---
