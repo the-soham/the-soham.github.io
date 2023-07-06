@@ -1,11 +1,14 @@
 title: Soham Bhagwat # your name (or website title) here
 logo: "/images/logo.jpg?raw=true" # your photo (or logo) here
 description: > # your text below (remove <br> elements if you don't need line breaks)
-  I am a Master's student pursuing Data Science @  <a href="https://www.iu.edu/">Indiana University</a>-Bloomington
+  <br>
+   Master's student pursuing Data Science <br> @  <a href="https://www.iu.edu/">Indiana University</a>-Bloomington
   <br>
   I completed my undergrad at SPPU with BE in Computer Engg. with honors in AI and ML. 
-  <br>
+  <br><br>
   <a href="https://www.linkedin.com/in/soham-bhagwat/">LinkedIn</a> 
+  <br>
+  <a href="https://github.com/the-soham">Github</a> 
   
 remote_theme: pages-themes/minimal@v0.2.0
 plugins:
