@@ -19,9 +19,20 @@ and the destruction caused by them.
 Compared the performance of various Recommender System using models like traditional Collaborative Filtering, Neural Graph Collaborative Filtering and Graph Sage
 on Amazon Products Dataset with more than 500k data points. The hit-rate for NGCF and GraphSage was 0.817 and 0.846 respectively, comparable to current state-of-the-art-models.
 
-![Python](https://img.shields.io/badge/python-3670A0?style=for-the-badge&logo=python&logoColor=ffdd54) ![PyTorch](https://img.shields.io/badge/PyTorch-%23EE4C2C.svg?style=for-the-badge&logo=PyTorch&logoColor=white) 
+![Python](https://img.shields.io/badge/python-3670A0?style=for-the-badge&logo=python&logoColor=ffdd54) ![PyTorch](https://img.shields.io/badge/PyTorch-%23EE4C2C.svg?style=for-the-badge&logo=PyTorch&logoColor=white) \
+\
+<a href = '/pdf/Graph_Analytics_Final_Report (2).pdf' target="_blank">Read Paper</a>
 
-<a href = >Read Paper<>
+---
+
+### SPPU Papers
+
+A comprehensive Android application which acts as a repository for preceding years’ engineering papers
+of SPPU using Android, Java, Firebase. The app has over 2k+ downloads and an average rating of 4.8 on Google Playstore.
+
+![Android](https://img.shields.io/badge/Android-3DDC84?style=for-the-badge&logo=android&logoColor=white)  ![Firebase](https://img.shields.io/badge/Firebase-039BE5?style=for-the-badge&logo=Firebase&logoColor=white)  ![Java](https://img.shields.io/badge/java-%23ED8B00.svg?style=for-the-badge&logo=openjdk&logoColor=white) \
+\
+<a href = 'https://play.google.com/store/apps/details?id=com.sppupapers' target="_blank">Checkout the App</a>
 
 <p style="font-size:11px">Page template forked from <a href="https://github.com/evanca/quick-portfolio">evanca</a></p>
 <!-- Remove above link if you don't want to attibute -->
