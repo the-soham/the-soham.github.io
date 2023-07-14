@@ -34,5 +34,6 @@ of SPPU using Android, Java, Firebase. The app has over 2k+ downloads and an ave
 \
 <a href = 'https://play.google.com/store/apps/details?id=com.sppupapers' target="_blank">Checkout the App</a>
 
+<p style="font-size:13px">This site is under construction and more projects shall be added sooner.Stay tuned!</p>
 <p style="font-size:11px">Page template forked from <a href="https://github.com/evanca/quick-portfolio">evanca</a></p>
 <!-- Remove above link if you don't want to attibute -->
