@@ -20,6 +20,7 @@ sidebar:
   - name: CV
     icon: <i class="fas fa-file-pdf"></i>
     link: /Soham_Bhagwat_Resume.pdf
+    target: _blank
   - name: LinkedIn
     icon: <i class="fab fa-linkedin"></i>
     link: https://www.linkedin.com/in/soham-bhagwat/
