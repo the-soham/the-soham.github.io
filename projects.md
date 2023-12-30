@@ -2,7 +2,9 @@
 layout: default
 ---
 
-## Projects
+[Home](./)
+
+## Projects     
 
 ---
 
