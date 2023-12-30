@@ -2,7 +2,7 @@
 layout: default
 ---
 
-## Project
+## Projects
 
 ---
 
