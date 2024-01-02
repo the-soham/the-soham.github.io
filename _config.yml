@@ -1,6 +1,6 @@
 title: Soham Bhagwat
 logo: /assets/img/logo.jpg
-email: sohambhagwat2 at gmail dot com
+# email: sohambhagwat2 at gmail dot com
 description: ""
 show_downloads: false
 blank_title: true
@@ -14,6 +14,9 @@ plugins:
 
 # You can find fonts from https://iconify.design or https://fontawesome.com. Below is just an example illustrating how to use custom icons
 sidebar:
+  - name: Email
+    icon: <i class='fa-regular fa-envelope'></i>
+    link: "mailto:sohambhagwat2@gmail.com"
   - name: GitHub
     icon: <i class="fa-brands fa-github"></i>
     link: https://github.com/the-soham
