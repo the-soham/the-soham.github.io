@@ -22,7 +22,7 @@ sidebar:
     link: https://github.com/the-soham
   - name: CV
     icon: <i class="fas fa-file-pdf"></i>
-    link: /Soham_Bhagwat_Resume.pdf
+    link: /Soham_Bhagwat.pdf
     target: _blank
   - name: LinkedIn
     icon: <i class="fab fa-linkedin"></i>
