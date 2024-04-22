@@ -11,3 +11,7 @@ During my third year of Engineering, I interned at [PTC](https://www.ptc.com/), 
 
 
 ---
+
+## UPDATE: Checkout my Youtube channel [here](https://www.youtube.com/@SQLbyAnon)
+
+---
