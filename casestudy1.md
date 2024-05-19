@@ -180,6 +180,7 @@ VALUES
     Did you use the COUNT() function to find the number of visits.    
     </details>
 
+    <br>
     <details>
     <summary>Hint2</summary>
     <br>
@@ -188,6 +189,7 @@ VALUES
     Did you use DISTINCT keyword inside COUNT() function to get the correct answer?
     </details>
 
+    <br>
     <details>
     <summary>Solution</summary>
     <pre>
@@ -195,7 +197,7 @@ VALUES
       FROM sales s
       GROUP BY s.customer_id </pre>
     </details>
-
+    <br>
 
 
 
@@ -208,7 +210,7 @@ VALUES
     This one is simple!<br>
     Use the COUNT() function to count how many times each item was bought    
     </details>
-
+    <br>
 
     <details>
     <summary>Hint2</summary>
@@ -217,7 +219,7 @@ VALUES
     Are you still getting incorrect answer?<br>
     Order by COUNT() in descending ORDER and get the top most product name.
     </details>
-
+    <br>
 
     <details>
     <summary>Solution</summary>
@@ -229,7 +231,7 @@ VALUES
       ORDER BY times_bought DESC 
       LIMIT 1 </pre>
     </details>
-
+    <br>
 
 
 
@@ -241,7 +243,7 @@ VALUES
     <br>
     At first find which customers have bought which items and their count using the COUNT() function.   
     </details>
-
+    <br>
 
     <details>
     <summary>Hint2</summary>
@@ -250,7 +252,7 @@ VALUES
     Are you still getting incorrect answer?<br>
     Create a CTE for this query
     </details>
-
+    <br>
 
     <details>
     <summary>Hint3</summary>
@@ -258,7 +260,7 @@ VALUES
     Now create another CTE to give the rank to each of the item that has been bought based on its count. <br>
     use RANK() PARTITION BY the customer_id and ORDER BY count in descending order.
     </details>
-
+    <br>
 
     <details>
     <summary>Hint4</summary>
@@ -267,6 +269,7 @@ VALUES
     use ARRAY_AGG() to group together items that may have the same count. <br>
     Ohh! you only need the popular item so select the one with rank=1
     </details>
+    <br>
     
     <details>
     <summary>Solution</summary>
@@ -288,7 +291,7 @@ VALUES
     WHERE rnk = 1
     GROUP BY r.customer_id,cnt  </pre>
     </details>
-
+    <br>
 
 
 
@@ -301,6 +304,7 @@ VALUES
     You'll need all the three tables in this query.
     First create a CTE to get the customer_id, order_date, product_name and use the RANK() function to giving the ranking to the items based on the order date
     </details>
+    <br>
 
     <details>
     <summary>Hint2</summary>
@@ -308,6 +312,7 @@ VALUES
     In the above CTE did you use the condition that order_date should be greater than join_date.
     From the CTE fing the customer_id and the product where the rank =1 
     </details>
+    <br>
     
     <details>
     <summary>Solution</summary>
@@ -330,7 +335,7 @@ VALUES
     FROM post_join_date pj 
     WHERE rnk =1  </pre>
     </details>
-
+    <br>
 
 
 7. Which item was purchased just before the customer became a member?
@@ -342,7 +347,7 @@ VALUES
     Use the same logic as the prior query. 
     Just ORDER BY order_Date in descending order in the windiw function
     </details>
-
+    <br>
 
     <details>
     <summary>Hint2</summary>
@@ -350,7 +355,7 @@ VALUES
     use the condition that order_date should be less than join_date.
     From the CTE fing the customer_id and the product where the rank =1 
     </details>
-
+    <br>
     
     <details>
     <summary>Solution</summary>
@@ -373,7 +378,7 @@ VALUES
     WHERE rnk =1
     GROUP BY pj.customer_id, pj.order_date, pj.rnk </pre>
     </details>
-
+    <br>
 
 8. What is the total items and amount spent for each member before they became a member?
 
@@ -383,13 +388,15 @@ VALUES
     <br>
     This query is simple. Try one more time!
     </details>
-
+    <br>
+  
     <details>
     <summary>Hint2</summary>
     <br>
     Read carefully, total items and total amount simply translate to the use of COUNT() and SUM() function respectively. 
     Be careful tho! order_date should be less than the join date.
     </details>
+    <br>
     
     <details>
     <summary>Solution</summary>
@@ -405,6 +412,7 @@ VALUES
   GROUP BY s.customer_id
   ORDER BY s.customer_id</pre>
     </details>
+    <br>
 
 9. If each $1 spent equates to 10 points and sushi has a 2x points multiplier - how many points would each customer have?
     
@@ -414,6 +422,7 @@ VALUES
     The only hint here: Use the CASE WHEN statements.
     Did you use SUM() to calculate the points.
     </details>
+    <br>
     
     <details>
     <summary>Solution</summary>
@@ -427,7 +436,7 @@ VALUES
     ORDER BY s.customer_id
     </pre>
     </details>
-
+    <br>
 
 
 10. In the first week after a customer joins the program (including their join date) they earn 2x points on all items, not just sushi - how many points do customer A and B have at the end of January?
