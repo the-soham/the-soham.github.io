@@ -23,52 +23,191 @@ Danny has shared with you 3 key datasets for this case study:
 * menu
 * members
 
-## Emphasis
+## Entity Relationship Diagram
+![image](https://github.com/the-soham/the-soham.github.io/assets/60706236/d5383e4f-413b-4ce6-969d-fe48534e7d45)
 
-*This text will be italic*  
-_This will also be italic_
-
-**This text will be bold**  
-__This will also be bold__
-
-_You **can** combine them_
-
-## Lists
-
-### Unordered
-
-* Item 1
-* Item 2
-* Item 2a
-* Item 2b
-* 
-
+## Schema DDL
 <details open>
-<summary>I automatically open</summary>
-<br>
-Waaa, you see me. I thought I would be hidden ;p .
+<summary>Click me for the schema script</summary>
+<pre>CREATE SCHEMA dannys_diner;
+SET search_path = dannys_diner;
+
+CREATE TABLE sales (
+  "customer_id" VARCHAR(1),
+  "order_date" DATE,
+  "product_id" INTEGER
+);
+
+INSERT INTO sales
+  ("customer_id", "order_date", "product_id")
+VALUES
+  ('A', '2021-01-01', '1'),
+  ('A', '2021-01-01', '2'),
+  ('A', '2021-01-07', '2'),
+  ('A', '2021-01-10', '3'),
+  ('A', '2021-01-11', '3'),
+  ('A', '2021-01-11', '3'),
+  ('B', '2021-01-01', '2'),
+  ('B', '2021-01-02', '2'),
+  ('B', '2021-01-04', '1'),
+  ('B', '2021-01-11', '1'),
+  ('B', '2021-01-16', '3'),
+  ('B', '2021-02-01', '3'),
+  ('C', '2021-01-01', '3'),
+  ('C', '2021-01-01', '3'),
+  ('C', '2021-01-07', '3');
+ 
+
+CREATE TABLE menu (
+  "product_id" INTEGER,
+  "product_name" VARCHAR(5),
+  "price" INTEGER
+);
+
+INSERT INTO menu
+  ("product_id", "product_name", "price")
+VALUES
+  ('1', 'sushi', '10'),
+  ('2', 'curry', '15'),
+  ('3', 'ramen', '12');
+  
+
+CREATE TABLE members (
+  "customer_id" VARCHAR(1),
+  "join_date" DATE
+);
+
+INSERT INTO members
+  ("customer_id", "join_date")
+VALUES
+  ('A', '2021-01-07'),
+  ('B', '2021-01-09');</pre>
 </details>
 
-### Ordered
+## We will try to answer the following questions:
 
-1. Item 1
-2. Item 2
-3. Item 3
-    1. Item 3a
-    2. Item 3b
+1. What is the total amount each customer spent at the restaurant?
+2. How many days has each customer visited the restaurant?
+3. What was the first item from the menu purchased by each customer?
+4. What is the most purchased item on the menu and how many times was it purchased by all customers?
+5. Which item was the most popular for each customer?
+6. Which item was purchased first by the customer after they became a member?
+7. Which item was purchased just before the customer became a member?
+8. What is the total items and amount spent for each member before they became a member?
+9. If each $1 spent equates to 10 points and sushi has a 2x points multiplier - how many points would each customer have?
+10. In the first week after a customer joins the program (including their join date) they earn 2x points on all items, not just sushi - how many points do customer A and B have at the end of January?
 
-<details>
-<summary>How do I dropdown?</summary>
-<br>
-This is how you dropdown.
-</details>
+## Let's jump straight to code:
 
-## Images
+1. What is the total amount each customer spent at the restaurant?
+    <details>
+    <summary>Hint1</summary>
+    <br>
+    customer_id and price are columns from different tables!<br>
+    What JOIN should we use?Yes, correct INNER JOIN
+    </details>
 
-![This is an alt text.](download.png "This is a sample image.")
-![download](https://github.com/the-soham/the-soham.github.io/assets/60706236/e436703e-45da-408c-81bf-6f4bc837d9bf)
+    <details>
+    <summary>Hint2</summary>
+    <br>
+    Now aggregate the amount spent by each person using the SUM() function . <br>
+    Are you still getting error?<br>
+    Did you use GROUP BY for the non aggregated columns?
+    </details>
 
-## Links
+    <details>
+    <summary>Solution</summary>
+    <pre>
+      SELECT s.customer_id, SUM(m.price) as amt_spent
+      FROM sales s 
+      INNER JOIN menu m ON s.product_id = m.product_id
+      GROUP BY s.customer_id
+      ORDER BY s.customer_id ASC</pre>
+    </details>
+
+##
+2. How many days has each customer visited the restaurant?
+
+   <details>
+    <summary>Hint1</summary>
+    <br>
+    Select customer_id and order_date columns<br>
+    Did you use the COUNT() function to find the number of visits.    
+    </details>
+
+    <details>
+    <summary>Hint2</summary>
+    <br>
+    Did you use GROUP BY for the non-aggregated column<br>
+    Are you still getting incorrect answer?<br>
+    Did you use DISTINCT keyword inside COUNT() function to get the correct answer?
+    </details>
+
+    <details>
+    <summary>Solution</summary>
+    <pre>
+      SELECT s.customer_id, COUNT(DISTINCT s.order_Date) as no_of_visits
+      FROM sales s
+      GROUP BY s.customer_id </pre>
+    </details>
+
+## 
+
+3. What was the first item from the menu purchased by each customer?
+    
+   <details>
+    <summary>Hint1</summary>
+    <br>
+    Select customer_id and order_date columns<br>
+    Did you use the COUNT() function to find the number of visits.    
+    </details>
+
+    <details>
+    <summary>Hint2</summary>
+    <br>
+    Did you use GROUP BY for the non-aggregated column<br>
+    Are you still getting incorrect answer?<br>
+    Did you use DISTINCT keyword inside COUNT() function to get the correct answer?
+    </details>
+
+    <details>
+    <summary>Solution</summary>
+    <pre>
+      SELECT s.customer_id, COUNT(DISTINCT s.order_Date) as no_of_visits
+      FROM sales s
+      GROUP BY s.customer_id </pre>
+    </details>
+
+## 
+
+4. What is the most purchased item on the menu and how many times was it purchased by all customers?
+    
+   <details>
+    <summary>Hint1</summary>
+    <br>
+    This one is simple!<br>
+    Use the COUNT() function to count how many times each item was bought    
+    </details>
+
+    <details>
+    <summary>Hint2</summary>
+    <br>
+    Did you use GROUP BY for the non-aggregated column<br>
+    Are you still getting incorrect answer?<br>
+    Order by COUNT() in descending ORDER and get the top most product name.
+    </details>
+
+    <details>
+    <summary>Solution</summary>
+    <pre>
+      SELECT m.product_name, COUNT(1) as times_bought
+      FROM sales s
+      INNER JOIN menu m ON s.product_id = m.product_id
+      GROUP BY m.product_name
+      ORDER BY times_bought DESC 
+      LIMIT 1 </pre>
+    </details>
+
 
 You may be using [Markdown Live Preview](https://markdownlivepreview.com/).
 
