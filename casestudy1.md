@@ -120,7 +120,7 @@ VALUES
     What JOIN should we use?Yes, correct INNER JOIN
     </details>
 
-
+    <br>
     <details>
     <summary>Hint2</summary>
     <br>
@@ -129,7 +129,7 @@ VALUES
     Did you use GROUP BY for the non aggregated columns?
     </details>
 
-
+    <br>
     <details>
     <summary>Solution</summary>
     <pre>
@@ -139,8 +139,8 @@ VALUES
       GROUP BY s.customer_id
       ORDER BY s.customer_id ASC</pre>
     </details>
-
-
+    <br>
+      
 2. How many days has each customer visited the restaurant?
 
    <details>
@@ -150,7 +150,7 @@ VALUES
     Did you use the COUNT() function to find the number of visits.    
     </details>
 
-
+    <br>
     <details>
     <summary>Hint2</summary>
     <br>
@@ -159,7 +159,7 @@ VALUES
     Did you use DISTINCT keyword inside COUNT() function to get the correct answer?
     </details>
 
-
+    <br>
     <details>
     <summary>Solution</summary>
     <pre>
@@ -167,7 +167,7 @@ VALUES
       FROM sales s
       GROUP BY s.customer_id </pre>
     </details>
-
+    <br>
 
 
 
