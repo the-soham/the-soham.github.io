@@ -177,26 +177,36 @@ VALUES
    <details>
     <summary>Hint1</summary>
     <br>
-    Select customer_id and order_date columns<br>
-    Did you use the COUNT() function to find the number of visits.    
+    Create a CTE to find the rank of products bought by the customer order by dates.<br>
+    Use RANK() and partition based on the customers
     </details>
 
     <br>
     <details>
     <summary>Hint2</summary>
     <br>
-    Did you use GROUP BY for the non-aggregated column<br>
-    Are you still getting incorrect answer?<br>
-    Did you use DISTINCT keyword inside COUNT() function to get the correct answer?
+    What if multiple items were bought on a given day<br>
+    Use ARRAY_AGG() to aggregate all the items together<br>
+    Are the same items getting repeated inside the array?Use the DISTINCT keyword.
+    Select only those items that have rank=1
     </details>
 
     <br>
     <details>
     <summary>Solution</summary>
     <pre>
-      SELECT s.customer_id, COUNT(DISTINCT s.order_Date) as no_of_visits
-      FROM sales s
-      GROUP BY s.customer_id </pre>
+      WITH first_purchase AS (
+      SELECT s.customer_id
+	           , s.product_id
+		          , RANK() OVER(PARTITION BY s.customer_id ORDER BY s.order_date) AS rnk
+      FROM sales s)
+
+      SELECT fp.customer_id
+      	   , ARRAY_AGG(DISTINCT m.product_name) AS first_item
+      FROM first_purchase fp
+      INNER JOIN menu m ON fp.product_id = m.product_id
+      WHERE fp.rnk=1
+      GROUP BY fp.customer_id </pre>
     </details>
     <br>
 
