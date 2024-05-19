@@ -487,6 +487,7 @@ Please try it on youe own before looking up for the solution.
 </pre>
 </details>
 
+<br>
 
 ### Rank The Things
 Recreate the following table output using the available data:
@@ -519,7 +520,6 @@ Recreate the following table output using the available data:
 </pre>
 </details>
 
-#
 
 If you liked the above content, connect with me on [LinkedIn](https://www.linkedin.com/in/soham-bhagwat/)
 
