@@ -408,7 +408,7 @@ VALUES
 
 9. If each $1 spent equates to 10 points and sushi has a 2x points multiplier - how many points would each customer have?
     
-     <details>
+    <details>
     <summary>Hint1</summary>
     <br>
     The only hint here: Use the CASE WHEN statements.
@@ -419,47 +419,51 @@ VALUES
     <summary>Solution</summary>
     <pre>
       
-   SELECT s.customer_id
-  	  ,	SUM(CASE WHEN m.product_name = 'sushi' THEN 2*m.price ELSE m.price END) as points 
-  FROM sales s
-  INNER JOIN menu m ON s.product_id = m.product_id
-  GROUP BY s.customer_id
-  ORDER BY s.customer_id
-</pre>
+     SELECT s.customer_id
+    	  ,	SUM(CASE WHEN m.product_name = 'sushi' THEN 2*m.price ELSE m.price END) as points 
+    FROM sales s
+    INNER JOIN menu m ON s.product_id = m.product_id
+    GROUP BY s.customer_id
+    ORDER BY s.customer_id
+    </pre>
     </details>
 
 
 
 10. In the first week after a customer joins the program (including their join date) they earn 2x points on all items, not just sushi - how many points do customer A and B have at the end of January?
     
-     <details>
+    <details>
     <summary>Hint1</summary>
     <br>
     The only hint here: Use the CASE WHEN statements.
     Use the DATE+INTERVAL function to find the date 1 week after the joining date.
     </details>
 
-     <details>
+   <br>
+
+    <details>
     <summary>Hint2</summary>
     <br>
     Make sure you filter the order_Date for all orders before Jan 31.
     </details>
     
-
+    <br>
+    
     <details>
     <summary>Solution</summary>
     <pre>
       
-    SELECT s.customer_id
-          ,SUM(CASE WHEN s.order_date BETWEEN mem.join_date AND DATE(mem.join_date + INTERVAL'1 week') THEN 2*m.price ELSE m.price END) as points
-    FROM sales s
-    INNER JOIN members mem ON mem.customer_id = s.customer_id
-    INNER JOIN menu m ON s.product_id = m.product_id
-    WHERE s.order_date <= '2021-01-31'
-    GROUP BY s.customer_id
-</pre>
+      SELECT s.customer_id
+            ,SUM(CASE WHEN s.order_date BETWEEN mem.join_date AND DATE(mem.join_date + INTERVAL'1 week') THEN 2*m.price ELSE m.price END) as points
+      FROM sales s
+      INNER JOIN members mem ON mem.customer_id = s.customer_id
+      INNER JOIN menu m ON s.product_id = m.product_id
+      WHERE s.order_date <= '2021-01-31'
+      GROUP BY s.customer_id
+    </pre>
     </details>
 
+    <br>
 ## Bonus Questions
 
 ### Join All The Things
@@ -520,8 +524,9 @@ Recreate the following table output using the available data:
 </pre>
 </details>
 
+<br>
 
 If you liked the above content, connect with me on [LinkedIn](https://www.linkedin.com/in/soham-bhagwat/)
-
+<br>
 Credits:
 [Danny Ma](https://8weeksqlchallenge.com/case-study-1/)
