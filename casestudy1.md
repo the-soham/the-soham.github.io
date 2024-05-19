@@ -36,6 +36,7 @@ Danny has shared with you 3 key datasets for this case study:
 ![image](https://github.com/the-soham/the-soham.github.io/assets/60706236/d5383e4f-413b-4ce6-969d-fe48534e7d45)
 
 ## Schema DDL
+
 <details open>
 <summary>Click me for the schema script</summary>
 <pre>CREATE SCHEMA dannys_diner;
@@ -93,6 +94,7 @@ VALUES
   ('B', '2021-01-09');</pre>
 </details>
 
+
 ## We will try to answer the following questions:
 
 1. What is the total amount each customer spent at the restaurant?
@@ -106,15 +108,18 @@ VALUES
 9. If each $1 spent equates to 10 points and sushi has a 2x points multiplier - how many points would each customer have?
 10. In the first week after a customer joins the program (including their join date) they earn 2x points on all items, not just sushi - how many points do customer A and B have at the end of January?
 
+
 ## Let's jump straight to code:
 
 1. What is the total amount each customer spent at the restaurant?
+   
     <details>
     <summary>Hint1</summary>
     <br>
     customer_id and price are columns from different tables!<br>
     What JOIN should we use?Yes, correct INNER JOIN
     </details>
+
 
     <details>
     <summary>Hint2</summary>
@@ -123,6 +128,7 @@ VALUES
     Are you still getting error?<br>
     Did you use GROUP BY for the non aggregated columns?
     </details>
+
 
     <details>
     <summary>Solution</summary>
@@ -134,7 +140,7 @@ VALUES
       ORDER BY s.customer_id ASC</pre>
     </details>
 
-##
+
 2. How many days has each customer visited the restaurant?
 
    <details>
@@ -144,6 +150,7 @@ VALUES
     Did you use the COUNT() function to find the number of visits.    
     </details>
 
+
     <details>
     <summary>Hint2</summary>
     <br>
@@ -151,6 +158,7 @@ VALUES
     Are you still getting incorrect answer?<br>
     Did you use DISTINCT keyword inside COUNT() function to get the correct answer?
     </details>
+
 
     <details>
     <summary>Solution</summary>
@@ -160,7 +168,8 @@ VALUES
       GROUP BY s.customer_id </pre>
     </details>
 
-## 
+
+
 
 3. What was the first item from the menu purchased by each customer?
     
@@ -187,9 +196,11 @@ VALUES
       GROUP BY s.customer_id </pre>
     </details>
 
-## 
+
+
 
 4. What is the most purchased item on the menu and how many times was it purchased by all customers?
+
     
    <details>
     <summary>Hint1</summary>
@@ -198,6 +209,7 @@ VALUES
     Use the COUNT() function to count how many times each item was bought    
     </details>
 
+
     <details>
     <summary>Hint2</summary>
     <br>
@@ -205,6 +217,7 @@ VALUES
     Are you still getting incorrect answer?<br>
     Order by COUNT() in descending ORDER and get the top most product name.
     </details>
+
 
     <details>
     <summary>Solution</summary>
@@ -217,15 +230,18 @@ VALUES
       LIMIT 1 </pre>
     </details>
 
-## 
+
+
 
 5.  Which item was the most popular for each customer?
+
     
      <details>
     <summary>Hint1</summary>
     <br>
     At first find which customers have bought which items and their count using the COUNT() function.   
     </details>
+
 
     <details>
     <summary>Hint2</summary>
@@ -235,12 +251,14 @@ VALUES
     Create a CTE for this query
     </details>
 
+
     <details>
     <summary>Hint3</summary>
     <br>
     Now create another CTE to give the rank to each of the item that has been bought based on its count. <br>
     use RANK() PARTITION BY the customer_id and ORDER BY count in descending order.
     </details>
+
 
     <details>
     <summary>Hint4</summary>
@@ -271,9 +289,11 @@ VALUES
     GROUP BY r.customer_id,cnt  </pre>
     </details>
 
-## 
+
+
 
 6. Which item was purchased first by the customer after they became a member?
+
     
      <details>
     <summary>Hint1</summary>
@@ -311,9 +331,10 @@ VALUES
     WHERE rnk =1  </pre>
     </details>
 
-## 
+
 
 7. Which item was purchased just before the customer became a member?
+
     
      <details>
     <summary>Hint1</summary>
@@ -322,12 +343,14 @@ VALUES
     Just ORDER BY order_Date in descending order in the windiw function
     </details>
 
+
     <details>
     <summary>Hint2</summary>
     <br>
     use the condition that order_date should be less than join_date.
     From the CTE fing the customer_id and the product where the rank =1 
     </details>
+
     
     <details>
     <summary>Solution</summary>
@@ -351,7 +374,9 @@ VALUES
     GROUP BY pj.customer_id, pj.order_date, pj.rnk </pre>
     </details>
 
+
 8. What is the total items and amount spent for each member before they became a member?
+
     
      <details>
     <summary>Hint1</summary>
@@ -402,6 +427,8 @@ VALUES
   ORDER BY s.customer_id
 </pre>
     </details>
+
+
 
 10. In the first week after a customer joins the program (including their join date) they earn 2x points on all items, not just sushi - how many points do customer A and B have at the end of January?
     
@@ -459,6 +486,7 @@ Please try it on youe own before looking up for the solution.
     ORDER BY s.customer_id, s.order_date
 </pre>
 </details>
+
 
 ### Rank The Things
 Recreate the following table output using the available data:
