@@ -439,7 +439,7 @@ VALUES
     Use the DATE+INTERVAL function to find the date 1 week after the joining date.
     </details>
 
-   <br>
+    <br>
 
     <details>
     <summary>Hint2</summary>
@@ -464,6 +464,7 @@ VALUES
     </details>
 
     <br>
+    
 ## Bonus Questions
 
 ### Join All The Things
