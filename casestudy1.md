@@ -12,6 +12,7 @@ In this blog, we will explore:
 
 Ready to enhance your SQL skills with practical, real-world data scenarios? Let's dive in and start our adventure!
 
+**Note**: This solutions were developed using PostgreSQL. Some functions may differ based on the DBMS you use, but the logic shall remain the same.
 
 ![This is an alt text.](https://8weeksqlchallenge.com/images/case-study-designs/1.png "This is a sample image.")
 
