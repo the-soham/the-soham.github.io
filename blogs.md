@@ -15,7 +15,7 @@ Whether you're preparing for a job interview, looking to enhance your data manip
 ---
 
 ---
-### [San Francisco Airport Landing Statistics Analysis](/SFO_Landings_Analysis)
+### [San Francisco Airport Landing Analysis](/SFO_Landings_Analysis)
 Welcome to the data analysis blog. In this blog we will walk through the analysis of SFO landing statistics data using Pandas and Matplotlib. You will also get insights into making beautiful visualizations using matplotlib.
 
 ---
