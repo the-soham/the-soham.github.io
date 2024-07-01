@@ -15,10 +15,8 @@ Whether you're preparing for a job interview, looking to enhance your data manip
 ---
 
 ---
-### [Testfile](/SFO_Landings_Analysis)
-Are you interested in solving a real-world advanced SQL question? If yes, then you have come to the right place. Please click on the above link to practice the SQL questions.
-In this challenge, you'll get the chance to work with complex data sets and tackle problems that mimic real-life scenarios. This is an excellent opportunity to apply and hone your SQL skills.
-Whether you're preparing for a job interview, looking to enhance your data manipulation skills, or just love a good challenge, this blog will guide you through each step. Dive in and start solving real-world SQL problems today!
+### [San Francisco Airport Landing Statistics Analysis](/SFO_Landings_Analysis)
+Welcome to the data analysis blog. In this blog we will walk through the analysis of SFO landing statistics data using Pandas and Matplotlib. You will also get insights into making beautiful visualizations using matplotlib.
 
 ---
 
